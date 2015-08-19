@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/data/2.5/weather?q=Boston&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 19 Aug 2015 16:25:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Source:
+      - redis
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: |
+        {"coord":{"lon":-71.06,"lat":42.36},"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"base":"cmc stations","main":{"temp":82.74,"pressure":1017,"humidity":65,"temp_min":79,"temp_max":89.6},"wind":{"speed":4.26,"deg":210.5},"clouds":{"all":40},"dt":1439997830,"sys":{"type":1,"id":1801,"message":0.0143,"country":"US","sunrise":1439978162,"sunset":1440027521},"id":4930956,"name":"Boston","cod":200}
+    http_version: 
+  recorded_at: Wed, 19 Aug 2015 16:25:02 GMT
+recorded_with: VCR 2.9.3
