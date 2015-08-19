@@ -7,7 +7,7 @@ RSpec.describe "weather_lookup" do
     expect(result).to eq(82.74)
   end
   
-  it "handles invalid location" do
+  it "handles invalid location", :vcr do
     expect(->{
       get_temp("")
     }).to raise_error(LocationNotFound, /Not found city/)
